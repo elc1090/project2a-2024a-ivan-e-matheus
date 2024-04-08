@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub API</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+
+    <!-- Import the Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        .hoverable:hover li{
+            opacity: 0.37;
+        }
+
+        .hoverable li:hover{
+            opacity: 1;
+            border: 1px dotted black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h3 class="text-center mt-5">GitHub API</h3>
+<form id="gitHubForm" class="form-inline mx-auto" style="width: 300px">
+    <input id="usernameInput" value="AndreaInfUFSM" class="form-control mb-5" type="text" name="username" placeholder="GitHub Username">
+    <input id="repoInput" value="elc1090-2024a" class="form-control mb-5" type="text" name="repository" placeholder="GitHub Repository">
+    <input type="submit" class="btn btn-primary ml-2 mb-5" value="Submit">
+</form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h4 id="userHeader">User Repositories</h4>
+            <ul id="userRepos" class="hoverable list-group mx-auto mb-5" style="width: 100%"></ul>
+        </div>
+        <div class="col-sm">
+            <h4 id="commitsHeader">Repository Commits</h4>
+            <ul id="commits" class="hoverable list-group mx-auto mb-5" style="width: 100%"></ul>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+
+</html>
